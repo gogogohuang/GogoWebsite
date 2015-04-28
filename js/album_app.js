@@ -11,8 +11,13 @@
                 camera: 'NikonD7000',
                 images:[
                     {
-                        decription  :   'India',
+                        decription  :   "India",
                         path        :   "image/india.jpg",
+                        labels      :   [
+                                            "india",
+                                            "boat",
+                                            "ganges"
+                                        ],
                         like        :   10,
                         canDownload :   true
                     }
@@ -36,8 +41,11 @@
                 images:
                     [
                         {
-                            decription  :   'Nepal',
+                            decription  :   "Nepal",
                             india       :   "image/nepal.JPG",
+                            labels      :   [
+                                                "nepal"
+                                            ],
                             like        :   10,
                             canDownload :   false
                         }

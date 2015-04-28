@@ -39,16 +39,18 @@
                     <p> This is for demo</p>
                 </div>
                 <div>
+                    <img ng-src="{{gellaryCtrl.photos[0].images[0].path}}" class="img-responsive"></img>
                     <li>
-                        <img ng-src="{{gellaryCtrl.photos[0].images[0].path}}" class="img-responsive" ></img>
                         <h4>
-                            <span class="label label-default">INDIA</span>
-                            <span class="label label-primary">NIKON</span>
-                            <span class="label label-info"> Ganges</span>
+                            <span class="label label-info" ng-show="gellaryCtrl.photos[0].images[0].labels.length" ng-repeat="labels in gellaryCtrl.photos[0].images[0].labels">
+                                {{ labels }}
+                            </span>
                         </h4>
                     </li>
                 </div>
-                <p class="pull-right"> Author:JZ</p>
+                <div>
+                    <p class="pull-right"> Author:JZ</p>
+                </div>
             </div>
         </div>
     </body>
