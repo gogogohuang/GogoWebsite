@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="photoGallery">
+    <head>
+        <link   href="css/bootstrap.min.css" rel="stylesheet"></link>
+        <script src="js/angular.min.js"></script>
+        <script src="js/album_app.js"></script>
+    </head>
+    
+    <body ng-controller="GellaryController as gellaryCtrl">
+        <div class="container">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">JinZe Huang</a>
+                    </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a>Gellary</a>
+                        </li>
+                        <li>
+                            <a>Blog</a>
+                        </li>
+                        <li>
+                            <a>About</a>
+                        </li>
+                        <li>
+                            <a>Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+                </div>
+            </nav>
+
+            <div class="container theme-showcase" role="main">
+                <div class="jumbotron">
+                    <h1>Under Construction</h1>
+                    <p> This is for demo</p>
+                </div>
+                <div>
+                    <li>
+                        <img ng-src="{{gellaryCtrl.photos[0].images[0].path}}" class="img-responsive" ></img>
+                        <h4>
+                            <span class="label label-default">INDIA</span>
+                            <span class="label label-primary">NIKON</span>
+                            <span class="label label-info"> Ganges</span>
+                        </h4>
+                    </li>
+                </div>
+                <p class="pull-right"> Author:JZ</p>
+            </div>
+        </div>
+    </body>
+</html>
