@@ -2,9 +2,16 @@
     <div class="panel-heading">
         <h3>Gellary</h3>
     </div>
-    <div class="entry-summary">
+    <div class="entry-summary"> 
         <p></p>
-        <div class="col-sm-4" style="width:30%">
+        <div class="col-sm-4" style="width:30%" ng-repeat="photos in gellaryCtrl.photos">
+            <img ng-src="{{photos.images[0].path}}" class="img-roundedi img-responsive"></img>
+            <p class="text-center">
+               <strong>{{photos.images[0].decription}}</strong>
+            </p>
+        </div>
+        <!--
+        <div class="col-sm-4" style="width:30%" id="{{}}">
             <img ng-src="{{gellaryCtrl.photos[0].images[1].path}}" class="img-rounded img-responsive"></img>
             <p class="text-center">
                 <strong>Varanasi, India</strong>
@@ -22,5 +29,6 @@
                 <strong>Kathmandu, Nepal</strong>
             </p> 
         </div>
+        -->
     </div>
 </div>

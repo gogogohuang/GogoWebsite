@@ -14,7 +14,7 @@
             return this.tab === checkTab;
         };
     });
-    
+
     app.directive('gellary',function(){
         return {
             restrict    :   'E',
@@ -142,6 +142,36 @@
                             author : "test@moxa.com"
                         }
                     ]
+             },
+             {
+                author: 'Justin',
+                camera: 'Nikon',
+                images:
+                    [
+                        {
+                            decription  :   "Wedding",
+                            path        :   "image/wedding.jpg",
+                            labels      :   [
+                                                "wedding"
+                                            ],
+                            like        :   10,
+                            canDownload :   false
+                        }
+                    ],
+                reviews:
+                    [
+                        {
+                            stars : 5,
+                            body: "I love this",
+                            author: "gogo"
+                        },
+                        {
+                            stars: 4,
+                            body: "Not Bad",
+                            author : "test@moxa.com"
+                        }
+                    ]
              }
+
         ];
 })();
