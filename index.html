@@ -44,12 +44,12 @@
                     <p> This is for demo</p>
                 </div>
                 <!-- Index -->
-                <div class="panel" ng-show="panel.isSelected(0)">
-                    <img ng-src="{{gellaryCtrl.photos[0].images[0].path}}" class="img-rounded img-responsive"></img>
+                <div class="panel" ng-show="panel.isSelected(0)" ng-controller="change_photo">
+                    <img ng-src="{{path}}" class="img-rounded img-responsive"></img>
                     <li>
                         <h4>
-                            <span class="label label-info" ng-show="gellaryCtrl.photos[0].images[0].labels.length" ng-repeat="labels in gellaryCtrl.photos[0].images[0].labels">
-                                {{ labels }}
+                            <span class="label label-info" ng-repeat="labels in _labels">
+                                {{labels}}
                             </span>
                         </h4>
                     </li>

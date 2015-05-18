@@ -15,6 +15,23 @@
         };
     });
 
+    app.controller('change_photo', function($scope, $interval){
+        var i;
+        i=1;
+        $scope.path = datas[0].images[0].path;
+        $scope._labels = datas[0].images[0].labels;
+
+        $interval(function(){
+            $scope.path = datas[i].images[0].path;
+            $scope._labels = datas[i].images[0].labels;
+            i++;
+            if(i>3){
+                i=0;
+            }
+        },3000);
+    });
+    
+    
     app.directive('gellary',function(){
         return {
             restrict    :   'E',
