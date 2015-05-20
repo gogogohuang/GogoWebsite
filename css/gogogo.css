@@ -1,0 +1,74 @@
+/*!
+ * Gogogo v0.1 
+ * Copyright 
+ */
+
+body, ul.navigation, ul.navigation li, ul.navigation ul, a{
+    margin  :   0;
+    padding :   0;
+    text-decoration:    none;
+}
+
+ul.navigation,ul.navigation li{
+    list-style:   none;
+}
+
+ul.navigation li{
+    position:   relative;
+    float   :   left; 
+}
+
+ul.navigation li a{
+    display:    block;
+    padding:    12px 20px;
+    background: #888;
+    color:  #000;
+}
+
+ul.navigation > li > a {
+    border-bottom:  1px solid #CCC;
+    border-left:    1px solid #CCC;
+}
+
+ul.navigation > li > a:hover {
+    color:#666;
+    background:#FFF;
+}
+
+ul.navigation li ul{
+    display : none;
+    float : left;
+    position : absolute;
+    left : 0;
+    margin: 0;
+}
+
+ul.navigation li:hover > ul{
+    display : block;
+}
+
+ul.navigation ul li{
+    border-bottom : 1px solid #DDD;
+}
+
+ul.navigation ul li:last-child {
+    border-bottom:none;
+}
+
+ul.navigation ul a {
+    width:120px;
+    padding:10px 12px;
+    color:#666;
+    background:#FFF;
+}
+
+ul.navigation ul a:hover {
+    background: #CCC;
+}
+
+ul.navigation ul li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
