@@ -17,44 +17,53 @@
 
     app.controller('change_photo', function($scope, $interval){
         var i;
-        i=1;
-        $scope.path = datas[0].images[0].path;
-        $scope._labels = datas[0].images[0].labels;
+        i=0;
+        $scope.path = datas[i].images[0].path;
+        $scope._labels = datas[i].images[0].labels;
 
         $interval(function(){
-            $scope.path = datas[i].images[0].path;
-            $scope._labels = datas[i].images[0].labels;
             i++;
-            if(i>3){
+            if(i>6){
                 i=0;
             }
+            $scope.path = datas[i].images[0].path;
+            $scope._labels = datas[i].images[0].labels;
         },3000);
     });
-    
+   
+    app.controller('albumSelect', function($scope){
+        $scope.album_List = "girls";
+
+    });
+
     
     app.directive('gellary',function(){
         return {
             restrict    :   'E',
-            templateUrl :   'html/gellary.html'
+            templateUrl :   'html/gellary.html',
+            replace     :   true,
         };
     });
 
     app.directive('blog',function(){
         return {
             restrict    :   'E',
-            templateUrl :   'html/blog.html'
+            templateUrl :   'html/blog.html',
+            replace     :   true,
         };
     });
     app.directive('about',function(){
         return {
             restrict    :   'E',
-            templateUrl :   'html/about.html'
+            templateUrl :   'html/about.html',
+            replace     :   true,
         };
     });
     app.directive('contact',function(){
         return {
             restrict    :   'E',
-            templateUrl :   'html/contact.html'
+            templateUrl :   'html/contact.html',
+            replace     :   true,
         };
     });
 
@@ -137,7 +146,7 @@
                 images:
                     [
                         {
-                            decription  :   "Stacey",
+                            decription  :   "Girl",
                             path        :   "image/stacey.jpg",
                             labels      :   [
                                                 "taiwan"
@@ -170,6 +179,98 @@
                             path        :   "image/wedding.jpg",
                             labels      :   [
                                                 "wedding"
+                                            ],
+                            like        :   10,
+                            canDownload :   false
+                        }
+                    ],
+                reviews:
+                    [
+                        {
+                            stars : 5,
+                            body: "I love this",
+                            author: "gogo"
+                        },
+                        {
+                            stars: 4,
+                            body: "Not Bad",
+                            author : "test@moxa.com"
+                        }
+                    ]
+             },
+             {
+                author: 'Justin',
+                camera: 'Nikon',
+                images:
+                    [
+                        {
+                            decription  :   "Tokyo",
+                            path        :   "image/tokyo.jpg",
+                            labels      :   [
+                                                "tokyo",
+                                                "B/W",
+                                                "lake"
+                                            ],
+                            like        :   10,
+                            canDownload :   false
+                        }
+                    ],
+                reviews:
+                    [
+                        {
+                            stars : 5,
+                            body: "I love this",
+                            author: "gogo"
+                        },
+                        {
+                            stars: 4,
+                            body: "Not Bad",
+                            author : "test@moxa.com"
+                        }
+                    ]
+             },
+             {
+                author: 'Justin',
+                camera: 'Nikon',
+                images:
+                    [
+                        {
+                            decription  :   "Girls",
+                            path        :   "image/girl.jpg",
+                            labels      :   [
+                                                "girl",
+                                                "portrait"
+                                            ],
+                            like        :   10,
+                            canDownload :   false
+                        }
+                    ],
+                reviews:
+                    [
+                        {
+                            stars : 5,
+                            body: "I love this",
+                            author: "gogo"
+                        },
+                        {
+                            stars: 4,
+                            body: "Not Bad",
+                            author : "test@moxa.com"
+                        }
+                    ]
+             },
+             {
+                author: 'Justin',
+                camera: 'Nikon',
+                images:
+                    [
+                        {
+                            decription  :   "HongKong",
+                            path        :   "image/hongkong.jpg",
+                            labels      :   [
+                                                "hongkong",
+                                                "B/W",
+                                                "street"
                                             ],
                             like        :   10,
                             canDownload :   false

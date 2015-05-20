@@ -4,6 +4,7 @@
         <title>JZ Huang</title>
         <link   href="css/bootstrap.min.css" rel="stylesheet"></link>
         <link   href="css/font-awesome.min.css" rel="stylesheet"></link>
+        <link   href="css/gogogo.css" rel="stylesheet"></link>
         <script src="js/angular.min.js"></script>
         <script src="js/Index_app.js"></script>
         <script src="js/album.js"></script>
@@ -19,7 +20,7 @@
                     </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{ active:panel.isSelected(1)}">
+                        <li ng-class="{ active:panel.isSelected(1)}" class="">
                             <a ng-click="panel.selectTab(1)">Gellary</a>
                         </li>
                         <li ng-class="{ active:panel.isSelected(2)}">
@@ -31,19 +32,14 @@
                         <li ng-class="{ active:panel.isSelected(4)}">
                             <a ng-click="panel.selectTab(4)">Contact</a>
                         </li>
-
                     </ul>
                 </div>
-                </div>
             </nav>
+            <div style="height:25px;background-color:#fff;">
+            </div>
 <!--navbar-->
 
-            <div class="container theme-showcase" role="main">
-                <div class="jumbotron">
-                    <h1>Under Construction</h1>
-                    <p> This is for demo</p>
-                </div>
-                <!-- Index -->
+            <div class="container" role="main">
                 <div class="panel" ng-show="panel.isSelected(0)" ng-controller="change_photo">
                     <img ng-src="{{path}}" class="img-rounded img-responsive"></img>
                     <li>
@@ -58,8 +54,8 @@
 
                 <!-- Gellary -->
                 <div class="panel" ng-show="panel.isSelected(1)">
-                   <div>
-                       <gellary></gellary>
+                    <div>
+                        <gellary></gellary>
                    </div>
                 </div>
                 <!---->

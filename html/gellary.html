@@ -1,34 +1,51 @@
-<div class="row">
-    <div class="panel-heading">
-        <h3>Gellary</h3>
+<div>
+    <div style="height:30px">
     </div>
-    <div class="entry-summary"> 
-        <p></p>
-        <div class="col-sm-4" style="width:30%" ng-repeat="photos in gellaryCtrl.photos">
-            <img ng-src="{{photos.images[0].path}}" class="img-roundedi img-responsive"></img>
-            <p class="text-center">
-               <strong>{{photos.images[0].decription}}</strong>
-            </p>
+    
+    <div>
+        <div>
+            <p></p>
         </div>
-        <!--
-        <div class="col-sm-4" style="width:30%" id="{{}}">
-            <img ng-src="{{gellaryCtrl.photos[0].images[1].path}}" class="img-rounded img-responsive"></img>
-            <p class="text-center">
-                <strong>Varanasi, India</strong>
-            </p> 
+
+        <div class="row">
+            <div class="col-xs-5" ng-repeat="photos in gellaryCtrl.photos" align="center">
+                <img ng-src="{{photos.images[0].path}}" class="img-rounded img-responsive"></img>
+                <p class="text-center">
+                   <strong>{{photos.images[0].decription}}</strong>
+                </p>
+            </div>
         </div>
-        <div class="col-sm-4" style="width:30%">
-            <img ng-src="{{gellaryCtrl.photos[2].images[0].path}}" class="img-rounded img-responsive"></img>
-            <p class="text-center">
-                <strong>Taipei, Taiwan</strong>
-            </p> 
-        </div>
-        <div class="col-sm-4" style="width:30%">
-            <img ng-src="{{gellaryCtrl.photos[1].images[0].path}}" class="img-rounded img-responsive"></img>
-            <p class="text-center">
-                <strong>Kathmandu, Nepal</strong>
-            </p> 
-        </div>
-        -->
+    </div>
+
+    <div height="10px">
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">Country</a>
+                <ul>
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Nepal</a></li>
+                    <li><a href="#">Taiwan</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portrait</a>
+                <ul>
+                    <li><a href="#">Stacey</a></li>
+                    <li><a href="#">Mumu</a></li>
+                    <li><a href="#">Ann</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Wedding</a>
+                <ul>
+                    <li><a href="#">Ikki</a></li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </div>
