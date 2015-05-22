@@ -30,13 +30,16 @@
             $scope._labels = datas[i].images[0].labels;
         },3000);
     });
-   
-    app.controller('albumSelect', function($scope){
-        $scope.album_List = "girls";
 
+    app.controller('selectContact', function($scope){
+        $scope.contactModel=[
+            {id:1,name :'gogogohuang',email:'test@g.com'},
+            {id:2,name :'Stacey',email:'test2@g.com'},
+        ];
+        $scope.display = $scope.contactModel[1];
     });
 
-    
+
     app.directive('gellary',function(){
         return {
             restrict    :   'E',
