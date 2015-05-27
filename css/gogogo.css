@@ -239,3 +239,84 @@ a img.aligncenter {
     margin: 0;
     padding: 0 4px 5px;
 }
+
+
+.upcoming-title::after, .upcoming-title::before {
+    content: " ";
+    display:table;
+}
+
+*, *::after, *::before {
+    box-sizinf: border-box;
+}
+
+.upcoming-title::after {
+    clear: both;
+}
+
+.upcoming-title {
+    background: #DCDCDC none repeat scroll 0 0;
+    position:   relative;
+    transition: box-shadow 0.3s ease 0s;
+}
+
+.upcoming-title .upcoming-title {
+    float: left;
+    padding-left:10px;
+    padding-top:10px;
+    width:70%;
+    color: #000;
+}
+
+.upcoming-title .upcoming-date {
+    float: left;
+    padding: 5px 5px 5px 15px;
+    width:10%;
+    color:#fff;
+    background:#123;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.upcoming-title .upcoming-date .upcoming-month {
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.upcoming .upcoming-date .upcoming-day {
+    font-weight:500;
+    line-height:27px;
+}
+
+.upcoming-title .upcoming-short-title {
+    padding-right:10px
+}
+
+.upcoming-title .upcoming-title .upcoming-short-title {
+    font-family: 'PT Serif', serif;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.upcoming-title .upcoming-title .upcoming-content {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.upcoming-title .upcoming-name {
+    font-family: 'Roboto Condensed', sans-serif;
+    float:right;
+    padding-right:5px;
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+.author {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.author-title{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px; 
+}

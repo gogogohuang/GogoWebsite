@@ -2,9 +2,10 @@
 <html ng-app="photoGallery">
     <head>
         <title>JZ Huang</title>
-        <link   href="css/bootstrap.min.css" rel="stylesheet"></link>
-        <link   href="css/font-awesome.min.css" rel="stylesheet"></link>
-        <link   href="css/gogogo.css" rel="stylesheet"></link>
+        <link href="css/bootstrap.min.css" rel="stylesheet"></link>
+        <link href="css/font-awesome.min.css" rel="stylesheet"></link>
+        <link href="css/gogogo.css" rel="stylesheet"></link>
+        <link href='http://fonts.googleapis.com/css?family=Oswald|PT+Sans+Narrow:700|Yanone+Kaffeesatz:300|PT+Serif:700|Pacifico|Satisfy|Tangerine|Patua+One|Roboto+Condensed' rel='stylesheet' type='text/css'>
         <script src="js/angular.min.js"></script>
         <script src="js/Index_app.js"></script>
         <script src="js/album.js"></script>
@@ -30,7 +31,7 @@
                             <a ng-click="panel.selectTab(3)">About</a>
                         </li>
                         <li ng-class="{ active:panel.isSelected(4)}">
-                            <a ng-click="panel.selectTab(4)">Contact</a>
+                            <a ng-click="panel.selectTab(4)">Message</a>
                         </li>
                     </ul>
                 </div>
@@ -74,12 +75,12 @@
 
                 <!-- Contact -->
                 <div class="panel" ng-show="panel.isSelected(4)">
-                    <contact></contact>
+                    <Contact></Contact>
                 </div>
                 <!---->
 
                 <div>
-                    <p class="pull-right"> Author:JZ</p>
+                    <p class="pull-right author"> Author:JZ</p>
                 </div>
             </div>
         </div>

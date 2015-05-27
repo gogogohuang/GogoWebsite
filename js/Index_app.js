@@ -5,6 +5,10 @@
         this.photos = datas;
     });
 
+    app.controller('messageController', function($scope){
+        $scope._message = msg;
+    });
+
     app.controller('panelController', function(){
         this.tab = 0;
         this.selectTab = function(setTab){
@@ -70,6 +74,33 @@
         };
     });
 
+    app.directive('message',function(){
+        return {
+            restrict    :   'E',
+            templateUrl :   'html/message.html',
+            replace     :   true,
+        };
+    });
+
+
+    var msg = [
+        {
+            name : 'Gogogo',
+            email_address : 'gogogo@g.com',
+            subject : 'We rae Here',
+            content : 'We just arrive in Brazil',
+            month   : 'Dec',
+            day     : '25',
+        },
+        {
+            name : 'Stacey',
+            email_address : 'stacey@g.com',
+            subject : 'Ready to leave',
+            content : 'Hello, we would move to Rio',
+            month   : 'Dec',
+            day     : '29',
+        }
+    ];
 
 
     var datas = 

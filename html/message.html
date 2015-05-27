@@ -1,0 +1,17 @@
+<div ng-controller="messageController">
+    <div class="row" ng-repeat="messgae in _message">
+        <div class="col-md-7">
+            <div class="upcoming-title">
+                <div class="upcoming-date hidden-xs">
+                        <div class="upcoming-month">{{messgae.month}}</div>
+                        <div class="upcoming-day">{{messgae.day}}</div>
+                </div>
+                <div class="upcoming-title">
+                    <div class="upcoming-short-title">{{messgae.content}}</div>
+                    <div class="upcoming-name">from:{{messgae.name}}</div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+    </div>
+</div>
