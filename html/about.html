@@ -1,27 +1,36 @@
-<div class="row">
+<div class="row" ng-controller="profileController as profileCtrl">
     <div style="height:30px">
     </div>
-    <div class="panel-heading">
-       <p class="author-title">Huang JinZe</p> 
-        <a href="https://www.facebook.com/gogogo.huang"  style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP">Gogogo Huang</a>
-        <br />
-        <a href="https://www.facebook.com/gogogo.huang" title="Gogogo Huang" target="_TOP">
-            <img class="img" src="https://badge.facebook.com/badge/100000091773662.3225.1724921233.png" style="border: 0px;" alt="" />
-        </a>
-        <br />
-        <a href="https://www.facebook.com/badges/" title="&#x5efa;&#x7acb;&#x4f60;&#x7684;&#x540d;&#x7247;&#x8cbc;&#xff01;" style="font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 11px; font-variant: normal; font-style: normal; font-weight: normal; color: #3B5998; text-decoration: none;" target="_TOP"></a>
-        <li>
-            <a href="https://www.facebook.com/gogogo.huang/" target="_blank">Facebook</a>
-        </li>
-        <li>
-            <a href="https://www.flickr.com/gogogohuang/" target="_blank">Flickr</a>
-        </li>
-        <li>
-            <a href="https://gogogohuang.blogspot.com/" target="_blank">Blogger</a>
-        </li>
+    <div class="col-md-4" >
+        <p class="author-title">{{ profileCtrl.profile[0].name }}</p>
+        <div class="profile-content">
+            {{profileCtrl.profile[0].content}}
+        </div>
 
+        <div class="side_social">
+            <a class="btn btn-flickr link_path" href="https://www.flickr.com/gogogohuang/" target="_blank" >
+                <i class="fa fa-flickr fa-2x"></i>
+            </a>
+            <a class="btn btn-facebook link_path" href="#">
+                <i class="fa fa-facebook fa-2x"></i>
+            </a>
+        </div>
     </div>
-    <div class="panel-heading">
-        <p class="author-title">Stacey</p>
+
+    <div class="col-md-4">
+        <p class="author-title">{{ profileCtrl.profile[1].name }}</p>
+        <div class="profile-content">
+            {{profileCtrl.profile[1].content}}
+        </div>
+
+        <div class="side_social">
+            <a class="btn btn-flickr link_path" href="#">
+                <i class="fa fa-flickr fa-2x"></i>
+            </a>
+            <a class="btn btn-facebook link_path" href="#">
+                <i class="fa fa-facebook fa-2x"></i>
+            </a>
+        </div>
+
     </div>
 </div>

@@ -5,6 +5,10 @@
         this.photos = datas;
     });
 
+    app.controller('profileController', function(){
+        this.profile = profile;
+    });
+
     app.controller('messageController', function($scope){
         $scope._message = msg;
     });
@@ -42,7 +46,6 @@
         ];
         $scope.display = $scope.contactModel[1];
     });
-
 
     app.directive('gellary',function(){
         return {
@@ -102,6 +105,22 @@
         }
     ];
 
+
+    var profile = [
+        {
+            name : 'JinZe Huang',
+            picture : 'image/profile/Gogo_profile_pic.jpg',
+            content : 'Lover of B/W. Shoot on digital',
+            profile_link_FB : 'gogogo.huang',
+            profile_link_flickr : 'gogogohuang',
+        },
+        {
+            name : 'Stacey Wu',
+            picture : 'image/profile/Stacey_profile_pic.jpg',
+            content : 'Lover of travel.',
+        }
+    
+    ];
 
     var datas = 
         [
