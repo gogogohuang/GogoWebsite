@@ -10,7 +10,15 @@
     });
 
     app.controller('messageController', function($scope){
-        $scope._message = msg;
+        this.message = msg;
+    });
+
+    app.controller('MsgPostController', function(){
+        this.message = {};
+        this.addMsg = function(){
+                msg.push(this.message);
+                this.message = {};
+        };
     });
 
     app.controller('panelController', function(){
@@ -89,16 +97,12 @@
     var msg = [
         {
             name : 'Gogogo',
-            email_address : 'gogogo@g.com',
-            subject : 'We rae Here',
             content : 'We just arrive in Brazil',
             month   : 'Dec',
             day     : '25',
         },
         {
             name : 'Stacey',
-            email_address : 'stacey@g.com',
-            subject : 'Ready to leave',
             content : 'Hello, we would move to Rio',
             month   : 'Dec',
             day     : '29',
@@ -110,7 +114,7 @@
         {
             name : 'JinZe Huang',
             picture : 'image/profile/Gogo_profile_pic.jpg',
-            content : 'Lover of B/W. Shoot on digital',
+            content : 'Lover of B/W. Shoot on digital. Believer of Hiphop ',
             profile_link_FB : 'gogogo.huang',
             profile_link_flickr : 'gogogohuang',
         },
@@ -118,6 +122,9 @@
             name : 'Stacey Wu',
             picture : 'image/profile/Stacey_profile_pic.jpg',
             content : 'Lover of travel.',
+            profile_link_FB : 'gogogo.huang',
+            profile_link_flickr : 'gogogohuang',
+
         }
     
     ];

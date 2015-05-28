@@ -1,17 +1,48 @@
-<div ng-controller="messageController">
-    <div class="row" ng-repeat="messgae in _message">
+<div class="row" ng-controller="messageController as MsgContrl">
+    <div ng-repeat="message in MsgContrl.message">
         <div class="col-md-7">
             <div class="upcoming-title">
                 <div class="upcoming-date hidden-xs">
-                        <div class="upcoming-month">{{messgae.month}}</div>
-                        <div class="upcoming-day">{{messgae.day}}</div>
+                        <div class="upcoming-month">{{message.month}}</div>
+                        <div class="upcoming-day">{{message.day}}</div>
                 </div>
                 <div class="upcoming-title">
-                    <div class="upcoming-short-title">{{messgae.content}}</div>
-                    <div class="upcoming-name">from:{{messgae.name}}</div>
+                    <div class="upcoming-short-title">{{message.content}}</div>
+                    <div class="upcoming-name">from:{{message.name}}</div>
                 </div>
             </div>
             <p></p>
         </div>
+    </div>
+
+    <div class="col-md-7">
+        <form name="MsgForm" ng-controller="MsgPostController as MsgFormCtrl" ng-submit="MsgFormCtrl.addMsg()">
+            <div class="upcoming-title" ng-show="MsgFormCtrl.message.day != null">
+                    <div class="upcoming-date hidden-xs">
+                            <div class="upcoming-month">{{MsgFormCtrl.message.month}}</div>
+                            <div class="upcoming-day">{{MsgFormCtrl.message.day}}</div>
+                    </div>
+                    <div class="upcoming-title">
+                        <div class="upcoming-short-title">{{MsgFormCtrl.message.content}}</div>
+                        <div class="upcoming-name">from:{{MsgFormCtrl.message.name}}</div>
+                    </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <fieldset class="form-group">
+                    Month : <input type="text" ng-model="MsgFormCtrl.message.month" placeholder="DEC,NOV..."></input>
+                    Day: <input type="text" ng-model="MsgFormCtrl.message.day" placeholder="01,02...."></input>
+                </fieldset>
+                <fieldset class="form-group">
+                    Name : <input ng-model="MsgFormCtrl.message.name" placeholder="Who you are"></input>
+                </fieldset>
+                <fieldset class="form-group">
+                    Content <textarea ng-model="MsgFormCtrl.message.content" placeholder="Leave some message"></textarea>
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="submit" class="btn btn-primary pull-right" value="Submit Message"></input>
+                </fieldset>
+            </div>
+        </form>
     </div>
 </div>
