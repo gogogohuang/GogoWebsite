@@ -339,3 +339,7 @@ a img.aligncenter {
 .profile-content {
     font-family: 'Oswald', sans-serif;
 }
+.profile-pic {
+    overflow:hidden;
+    width:200px;
+}

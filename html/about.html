@@ -1,36 +1,56 @@
 <div class="row" ng-controller="profileController as profileCtrl">
     <div style="height:30px">
     </div>
-    <div class="col-md-4" >
-        <p class="author-title">{{ profileCtrl.profile[0].name }}</p>
-        <div class="profile-content">
-            {{profileCtrl.profile[0].content}}
+    <div class="row">
+        <div class="col-md-6" >
+            <p class="author-title">{{ profileCtrl.profile[0].name }}</p>
+            <div class="col-md-4">
+                <div class="profile-content">
+                    {{ profileCtrl.profile[0].content }}
+               </div>
+            </div>
+
+            <div class="col-md-4">
+                <img class="profile-pic" ng-src="{{profileCtrl.profile[0].picture}}"></img>
+            </div>
         </div>
 
-        <div class="side_social">
-            <a class="btn btn-flickr link_path" href="https://www.flickr.com/gogogohuang/" target="_blank" >
-                <i class="fa fa-flickr fa-2x"></i>
-            </a>
-            <a class="btn btn-facebook link_path" href="#">
-                <i class="fa fa-facebook fa-2x"></i>
-            </a>
+        <div class="col-md-6">
+            <p class="author-title">{{ profileCtrl.profile[1].name }}</p>
+            <div class="col-md-4">
+                <div class="profile-content">
+                    {{ profileCtrl.profile[1].content }}
+               </div>
+            </div>
+
+            <div class="col-md-4">
+                <img class="profile-pic" ng-src="{{profileCtrl.profile[1].picture}}"></img>
+            </div>
         </div>
     </div>
 
-    <div class="col-md-4">
-        <p class="author-title">{{ profileCtrl.profile[1].name }}</p>
-        <div class="profile-content">
-            {{profileCtrl.profile[1].content}}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="side_social">
+                <a class="btn btn-flickr link_path" href="https://www.flickr.com/gogogohuang/" target="_blank" >
+                    <i class="fa fa-flickr fa-2x"></i>
+                </a>
+                <a class="btn btn-facebook link_path" href="#">
+                    <i class="fa fa-facebook fa-2x"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="side_social">
-            <a class="btn btn-flickr link_path" href="#">
-                <i class="fa fa-flickr fa-2x"></i>
-            </a>
-            <a class="btn btn-facebook link_path" href="#">
-                <i class="fa fa-facebook fa-2x"></i>
-            </a>
+        <div class="col-md-6">
+            <div class="side_social">
+                <a class="btn btn-flickr link_path" href="#">
+                    <i class="fa fa-flickr fa-2x"></i>
+                </a>
+                <a class="btn btn-facebook link_path" href="#">
+                    <i class="fa fa-facebook fa-2x"></i>
+                </a>
+            </div>
         </div>
-
     </div>
+
 </div>
