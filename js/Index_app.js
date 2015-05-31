@@ -14,10 +14,12 @@
     });
 
     app.controller('MsgPostController', function(){
+        var Today = new Date();
         this.message = {};
         this.addMsg = function(){
-                msg.push(this.message);
-                this.message = {};
+            this.message.date = Today.getTime();
+            msg.push(this.message);
+            this.message = {};
         };
     });
 
@@ -98,14 +100,12 @@
         {
             name : 'Gogogo',
             content : 'We just arrive in Brazil',
-            month   : 'Dec',
-            day     : '25',
+            date    : '1288323623006',
         },
         {
             name : 'Stacey',
             content : 'Hello, we would move to Rio',
-            month   : 'Dec',
-            day     : '29',
+            date    : '1288323623006',
         }
     ];
 

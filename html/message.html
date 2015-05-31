@@ -3,8 +3,8 @@
         <div class="col-md-7">
             <div class="upcoming-title">
                 <div class="upcoming-date hidden-xs">
-                        <div class="upcoming-month">{{message.month}}</div>
-                        <div class="upcoming-day">{{message.day}}</div>
+                        <div class="upcoming-month">{{message.date | date:'MMM'}}</div>
+                        <div class="upcoming-day">{{message.date | date:'dd'}}</div>
                 </div>
                 <div class="upcoming-title">
                     <div class="upcoming-short-title">{{message.content}}</div>
@@ -19,8 +19,8 @@
         <form name="MsgForm" ng-controller="MsgPostController as MsgFormCtrl" ng-submit="MsgFormCtrl.addMsg()">
             <div class="upcoming-title" ng-show="MsgFormCtrl.message.day != null">
                     <div class="upcoming-date hidden-xs">
-                            <div class="upcoming-month">{{MsgFormCtrl.message.month}}</div>
-                            <div class="upcoming-day">{{MsgFormCtrl.message.day}}</div>
+                            <div class="upcoming-month">{{MsgFormCtrl.message.date | date:'MMM'}}</div>
+                            <div class="upcoming-day">{{MsgFormCtrl.message.date | date:'dd'}}</div>
                     </div>
                     <div class="upcoming-title">
                         <div class="upcoming-short-title">{{MsgFormCtrl.message.content}}</div>
@@ -29,9 +29,8 @@
             </div>
             <p></p>
             <div class="row">
-                <fieldset class="form-group">
-                    Month : <input type="text" ng-model="MsgFormCtrl.message.month" placeholder="DEC,NOV..."></input>
-                    Day: <input type="text" ng-model="MsgFormCtrl.message.day" placeholder="01,02...."></input>
+                <fieldset>
+                    <p ng-model="MsgFormCtrl.message.date"></p>
                 </fieldset>
                 <fieldset class="form-group">
                     Name : <input ng-model="MsgFormCtrl.message.name" placeholder="Who you are"></input>
